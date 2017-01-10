@@ -64,7 +64,6 @@ Input variables:
 
 - `x`: n x m array of data points, where each row represents one m-dimensional point
 - `tol`: tolerance distance
-- `metric`: distance metric to use for interpoint distance calculation:             1 = city block, 2 = Euclidean (default), inf = infinity-norm, 0             = minimum difference.  See `help ipdm` for more details.
 
 See `help finclump` for full description of input and output variables.
 

@@ -68,7 +68,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 </style></head><body><div class="content"><h1><tt>findclump.m</tt>: Locate clumps of points in space</h1><!--introduction--><p>Author: Kelly Kearney</p><p>This repository includes the code for the <tt>findclump.m</tt> Matlab function, along with all dependent functions required to run it.</p><p>This function finds groups, or "clumps",  of data points, defined as points that are all within a certain distance of each other and not within that distance to any other points in the dataset.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Getting started</a></li><li><a href="#2">Syntax</a></li><li><a href="#3">Examples</a></li><li><a href="#6">Contributions</a></li></ul></div><h2>Getting started<a name="1"></a></h2><p><b>Prerequisites</b></p><p>This function requires Matlab R14 or later.</p><p><b>Downloading and installation</b></p><p>This code can be downloaded from <a href="https://github.com/kakearney/findclump-pkg/">Github</a> or the <a href="http://www.mathworks.com/matlabcentral/fileexchange/xxxx-example">MatlabCentral File Exchange</a>.  The File Exchange entry is updated daily from the GitHub repository.</p><p><b>Matlab Search Path</b></p><p>The following folders need to be added to your Matlab Search path (via <tt>addpath</tt>, <tt>pathtool</tt>, etc.):</p><pre class="language-matlab">findclump-pkg/InterPointDistanceMatrix
 findclump-pkg/findclump
-</pre><h2>Syntax<a name="2"></a></h2><pre>[xc, ix] = findclump(x, tol, metric)</pre><p>Input variables:</p><div><ul><li><tt>x</tt>: n x m array of data points, where each row represents one m-dimensional point</li><li><tt>tol</tt>: tolerance distance</li><li><tt>metric</tt>: distance metric to use for interpoint distance calculation:             1 = city block, 2 = Euclidean (default), inf = infinity-norm, 0             = minimum difference.  See <tt>help ipdm</tt> for more details.</li></ul></div><p>See <tt>help finclump</tt> for full description of input and output variables.</p><h2>Examples<a name="3"></a></h2><p>Let's assume we have some points clustered around certain locations, along with a line of points.</p><pre class="codeinput">xcent = [1 2 3 3.2];
+</pre><h2>Syntax<a name="2"></a></h2><pre>[xc, ix] = findclump(x, tol, metric)</pre><p>Input variables:</p><div><ul><li><tt>x</tt>: n x m array of data points, where each row represents one m-dimensional point</li><li><tt>tol</tt>: tolerance distance</li></ul></div><p>See <tt>help finclump</tt> for full description of input and output variables.</p><h2>Examples<a name="3"></a></h2><p>Let's assume we have some points clustered around certain locations, along with a line of points.</p><pre class="codeinput">xcent = [1 2 3 3.2];
 ycent = [1 2 3 3.1];
 xpt = bsxfun(@plus, rand(20,4)*0.1, xcent);
 ypt = bsxfun(@plus, rand(20,4)*0.1, ycent);
@@ -132,9 +132,6 @@ legend(<span class="string">'points'</span>, <span class="string">'clumps + sing
 %
 % * |x|: n x m array of data points, where each row represents one m-dimensional point
 % * |tol|: tolerance distance
-% * |metric|: distance metric to use for interpoint distance calculation:
-%             1 = city block, 2 = Euclidean (default), inf = infinity-norm, 0
-%             = minimum difference.  See |help ipdm| for more details.  
 %
 % See |help finclump| for full description of input and output variables.
 
