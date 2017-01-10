@@ -18,7 +18,7 @@
 %
 % This code can be downloaded from <https://github.com/kakearney/findclump-pkg/ Github>
 % or the
-% <http://www.mathworks.com/matlabcentral/fileexchange/xxxx-example
+% <http://www.mathworks.com/matlabcentral/fileexchange/61085-findclump
 % MatlabCentral File Exchange>.  The File Exchange entry is updated daily
 % from the GitHub repository.   
 %

@@ -32,7 +32,7 @@ This function requires Matlab R14 or later.
 **Downloading and installation**
 
 
-This code can be downloaded from [Github](https://github.com/kakearney/findclump-pkg/) or the [MatlabCentral File Exchange](http://www.mathworks.com/matlabcentral/fileexchange/xxxx-example).  The File Exchange entry is updated daily from the GitHub repository.
+This code can be downloaded from [Github](https://github.com/kakearney/findclump-pkg/) or the [MatlabCentral File Exchange](http://www.mathworks.com/matlabcentral/fileexchange/61085-findclump).  The File Exchange entry is updated daily from the GitHub repository.
 
 
 **Matlab Search Path**
